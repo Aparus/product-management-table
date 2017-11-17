@@ -1,9 +1,13 @@
-import { createStore } from "redux";
-import { product } from "./reducers";
+import { createStore, combineReducers } from 'redux';
+import { products, visibilityFilter } from './reducers';
 
+const productApp = combineReducers({
+  products,
+  visibilityFilter,
+});
 const store = createStore(
-  product,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  productApp,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
 export default store;
