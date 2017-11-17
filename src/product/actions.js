@@ -3,13 +3,23 @@ export const setVisibilityFilter = filter => ({
   filter,
 });
 
-export const addProduct = text => ({
+export const addProduct = product => ({
   type: 'ADD_PRODUCT',
-  id: Date.now(),
-  text,
+  payload: product,
 });
 
-export const toggleProduct = id => ({
+export const toggleProduct = SKUNumber => ({
   type: 'TOGGLE_PRODUCT',
-  id,
+  SKUNumber,
 });
+
+/*
+product fields:
+SKU Number
+Product Name
+Type
+Status
+Active Date
+Measurement Period
+Standard Rate
+*/

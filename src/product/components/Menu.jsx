@@ -28,11 +28,11 @@ const mapDispatchToLinkProps = (dispatch, ownProps) => ({
 
 const FilterLink = connect(mapStateToLinkProps, mapDispatchToLinkProps)(Link);
 
-const Menu = ({ store }) => (
+const Menu = () => (
   <p>
     Show: <FilterLink filter="SHOW_ALL">All</FilterLink>{' '}
-    <FilterLink filter="SHOW_ACTIVE">Active</FilterLink>{' '}
-    <FilterLink filter="SHOW_COMPLETED">Completed</FilterLink>
+    <FilterLink filter="SHOW_NONSELECTED">Non Selected</FilterLink>{' '}
+    <FilterLink filter="SHOW_SELECTED">Selected</FilterLink>
   </p>
 );
 

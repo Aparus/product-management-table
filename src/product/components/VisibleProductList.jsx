@@ -6,31 +6,32 @@ const getVisibleProducts = (products, filter) => {
   switch (filter) {
     case 'SHOW_ALL':
       return products;
-    case 'SHOW_COMPLETED':
-      return products.filter(p => p.completed);
-    case 'SHOW_ACTIVE':
-      return products.filter(p => !p.completed);
+    case 'SHOW_SELECTED':
+      return products.filter(p => p.selected);
+    case 'SHOW_NONSELECTED':
+      return products.filter(p => !p.selected);
     default:
       return products;
   }
 };
 
 // a purely presentational component and doesn't specify any behavior. But it knows how to render at to-do.
-const Product = ({ onClick, completed, text }) => (
-  <li
-    onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none',
-    }}
-  >
-    {text}
+const Product = ({
+  onClick, selected, SKUNumber, name,
+}) => (
+  <li onClick={onClick} className={selected ? 'selected' : 'nonSelected'}>
+    {SKUNumber} - {name}
   </li>
 );
 
 const ProductList = ({ products, onProductClick }) => (
   <ul>
     {products.map(product => (
-      <Product key={product.id} {...product} onClick={() => onProductClick(product.id)} />
+      <Product
+        key={product.SKUNumber}
+        {...product}
+        onClick={() => onProductClick(product.SKUNumber)}
+      />
     ))}
   </ul>
 );

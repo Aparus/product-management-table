@@ -2,15 +2,14 @@ export const product = (state, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
       return {
-        id: action.id,
-        text: action.text,
-        completed: false,
+        ...action.payload,
+        selected: false,
       };
     case 'TOGGLE_PRODUCT':
-      if (state.id !== action.id) return state;
+      if (state.SKUNumber !== action.SKUNumber) return state;
       return {
         ...state,
-        completed: !state.completed,
+        selected: !state.selected,
       };
     default:
       return state;

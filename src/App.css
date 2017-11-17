@@ -38,3 +38,7 @@
 .productApp li {
   list-style-type: none;
 }
+
+.productApp .selected {
+  background-color: #ddd;
+}
