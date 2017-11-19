@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addProduct } from '../actions';
 
-/* AddTodo не совсем контейнер, он просто вызывает диспатч,
+/* AddProduct не совсем контейнер, он просто вызывает диспатч,
   ему не нужен стор, поэтому мы можем создать коннект коротким путем:
-  AddTodo = connect()(AddTodo); */
+  AddProduct = connect()(AddProduct); */
 const AddProduct0 = ({ dispatch }) => {
   let inputSKUNumber;
   let inputProductName;

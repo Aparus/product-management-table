@@ -6,7 +6,9 @@ export const product = (state, action) => {
         selected: false,
       };
     case 'TOGGLE_PRODUCT':
-      if (state.SKUNumber !== action.SKUNumber) return state;
+      if (state.SKUNumber !== action.SKUNumber) return {
+        ...state, 
+        selected: false}
       return {
         ...state,
         selected: !state.selected,

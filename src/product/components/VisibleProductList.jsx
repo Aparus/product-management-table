@@ -15,7 +15,8 @@ const getVisibleProducts = (products, filter) => {
   }
 };
 
-// a purely presentational component and doesn't specify any behavior. But it knows how to render at to-do.
+// Product is a purely presentational component and doesn't specify any behavior. 
+// But it knows how to render product.
 const Product = ({
   onClick, selected, SKUNumber, name,
 }) => (
