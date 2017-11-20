@@ -15,26 +15,53 @@ const getVisibleProducts = (products, filter) => {
   }
 };
 
-// Product is a purely presentational component and doesn't specify any behavior. 
+// Product is a purely presentational component and doesn't specify any behavior.
 // But it knows how to render product.
-const Product = ({
-  onClick, selected, SKUNumber, name,
+const ProductRow = ({
+  onClick,
+  selected,
+  SKUNumber,
+  name,
+  type,
+  status,
+  activeDate,
+  measurement,
+  rate,
 }) => (
-  <li onClick={onClick} className={selected ? 'selected' : 'nonSelected'}>
-    {SKUNumber} - {name}
-  </li>
+  <tr onClick={onClick} className={selected ? 'selected' : 'nonSelected'}>
+    <td>{SKUNumber}</td>
+    <td>{name}</td>
+    <td>{type}</td>
+    <td>{status}</td>
+    <td>{activeDate}</td>
+    <td>{measurement}</td>
+    <td>{rate}</td>
+  </tr>
 );
 
 const ProductList = ({ products, onProductClick }) => (
-  <ul>
-    {products.map(product => (
-      <Product
-        key={product.SKUNumber}
-        {...product}
-        onClick={() => onProductClick(product.SKUNumber)}
-      />
-    ))}
-  </ul>
+  <table className="productTable">
+    <thead>
+      <tr>
+        <th>SKU Number</th>
+        <th>Product Name</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Active Date</th>
+        <th>Measurement</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      {products.map(product => (
+        <ProductRow
+          key={product.SKUNumber}
+          {...product}
+          onClick={() => onProductClick(product.SKUNumber)}
+        />
+      ))}
+    </tbody>
+  </table>
 );
 
 const mapStateToProductListProps = state => ({

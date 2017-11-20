@@ -1,3 +1,5 @@
+import productsInitialState from './productsInitialState';
+
 export const product = (state, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
@@ -6,9 +8,12 @@ export const product = (state, action) => {
         selected: false,
       };
     case 'TOGGLE_PRODUCT':
-      if (state.SKUNumber !== action.SKUNumber) return {
-        ...state, 
-        selected: false}
+      if (state.SKUNumber !== action.SKUNumber) {
+        return {
+          ...state,
+          selected: false,
+        };
+      }
       return {
         ...state,
         selected: !state.selected,
@@ -18,7 +23,7 @@ export const product = (state, action) => {
   }
 };
 
-export const products = (state = [], action) => {
+export const products = (state = productsInitialState, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
       return [...state, product(undefined, action)];
