@@ -5,8 +5,8 @@ import VisibleProductList from './VisibleProductList';
 
 const ProductApp = () => (
   <div className="productApp">
-    <Menu />
     <AddProduct />
+    <Menu />
     <VisibleProductList />
   </div>
 );

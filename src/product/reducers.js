@@ -4,7 +4,7 @@ export const product = (state, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
       return {
-        ...action.payload,
+        ...action.product,
         selected: false,
       };
     case 'TOGGLE_PRODUCT':

@@ -25,8 +25,8 @@ const ProductRow = ({
   type,
   status,
   activeDate,
-  measurement,
-  rate,
+  measurementPeriod,
+  standardRate,
 }) => (
   <tr onClick={onClick} className={selected ? 'selected' : 'nonSelected'}>
     <td>{SKUNumber}</td>
@@ -34,8 +34,8 @@ const ProductRow = ({
     <td>{type}</td>
     <td>{status}</td>
     <td>{activeDate}</td>
-    <td>{measurement}</td>
-    <td>{rate}</td>
+    <td>{measurementPeriod}</td>
+    <td>{standardRate}</td>
   </tr>
 );
 

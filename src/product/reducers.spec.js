@@ -6,7 +6,7 @@ test('test add product', () => {
 
   const action = {
     type: 'ADD_PRODUCT',
-    payload: {
+    product: {
       SKUNumber: '12345678',
       name: 'SIP Connectivity',
     },

@@ -5,7 +5,7 @@ export const setVisibilityFilter = filter => ({
 
 export const addProduct = product => ({
   type: 'ADD_PRODUCT',
-  payload: product,
+  product,
 });
 
 export const toggleProduct = SKUNumber => ({

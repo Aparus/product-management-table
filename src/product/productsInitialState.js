@@ -5,8 +5,8 @@ const productsInitialState = [
     type: 'Global',
     status: 'Available',
     activeDate: '10/17/2017',
-    measurement: 'Monthly',
-    rate: 5,
+    measurementPeriod: 'Monthly',
+    standardRate: 5,
   },
   {
     SKUNumber: 22345678,
@@ -14,8 +14,8 @@ const productsInitialState = [
     type: 'Partner Specific',
     status: 'Not Available',
     activeDate: '10/17/2017',
-    measurement: 'Weekly',
-    rate: 0.25,
+    measurementPeriod: 'Weekly',
+    standardRate: 0.25,
   },
   {
     SKUNumber: 32345678,
@@ -23,8 +23,8 @@ const productsInitialState = [
     type: 'Client Specific',
     status: 'Available',
     activeDate: '10/17/2017',
-    measurement: 'Daily',
-    rate: 1,
+    measurementPeriod: 'Daily',
+    standardRate: 1,
   },
   {
     SKUNumber: 42345678,
@@ -32,8 +32,8 @@ const productsInitialState = [
     type: 'Global',
     status: 'Not Available',
     activeDate: '10/17/2017',
-    measurement: 'Yearly',
-    rate: 3000,
+    measurementPeriod: 'Yearly',
+    standardRate: 3000,
   },
   {
     SKUNumber: 52345678,
@@ -41,8 +41,8 @@ const productsInitialState = [
     type: 'Global',
     status: 'Available',
     activeDate: '10/17/2017',
-    measurement: 'Usage',
-    rate: 1.25,
+    measurementPeriod: 'Usage',
+    standardRate: 1.25,
   },
 ];
 
