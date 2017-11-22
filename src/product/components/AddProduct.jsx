@@ -130,7 +130,7 @@ const MyInnerForm = (props) => {
         Submit
       </button>
 
-      <DisplayFormikState {...props} />
+      {/* <DisplayFormikState {...props} /> */}
     </form>
   );
 };
