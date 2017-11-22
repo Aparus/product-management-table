@@ -137,7 +137,9 @@ const MyInnerForm = (props) => {
 
 const EnhancedForm = withFormik({
   mapPropsToValues: () => ({
-    SKUNumber: 12345678,
+    SKUNumber: Date.now()
+      .toString()
+      .substr(-8),
     productName: 'Default Product',
     type: 'Global',
     status: 'Available',
@@ -177,13 +179,17 @@ const EnhancedForm = withFormik({
       .max(99999999, 'Rate must be less than 8 digits')
       .required('Rate is required!'),
   }),
-  handleSubmit: (values, { setSubmitting }) => {
+  handleSubmit(values, { props, setSubmitting }) {
+    props.dispatch(addProduct(values));
+    setSubmitting(false);
+    // resetForm();
+  },
+  /*   handleSubmit: (values, { setSubmitting, dispatch }) => {
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
       setSubmitting(false);
     }, 1000);
-    // dispatch(addProduct(values));
-  },
+  }, */
   displayName: 'BasicForm', // helps with React DevTools
 })(MyInnerForm);
 

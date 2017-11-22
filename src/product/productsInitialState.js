@@ -1,7 +1,7 @@
 const productsInitialState = [
   {
     SKUNumber: 12345678,
-    name: 'SIP Connectivity',
+    productName: 'SIP Connectivity',
     type: 'Global',
     status: 'Available',
     activeDate: '10/17/2017',
@@ -10,7 +10,7 @@ const productsInitialState = [
   },
   {
     SKUNumber: 22345678,
-    name: 'Number of Campaigns',
+    productName: 'Number of Campaigns',
     type: 'Partner Specific',
     status: 'Not Available',
     activeDate: '10/17/2017',
@@ -19,7 +19,7 @@ const productsInitialState = [
   },
   {
     SKUNumber: 32345678,
-    name: 'Number of Calls',
+    productName: 'Number of Calls',
     type: 'Client Specific',
     status: 'Available',
     activeDate: '10/17/2017',
@@ -28,7 +28,7 @@ const productsInitialState = [
   },
   {
     SKUNumber: 42345678,
-    name: 'Annual Technology Fee',
+    productName: 'Annual Technology Fee',
     type: 'Global',
     status: 'Not Available',
     activeDate: '10/17/2017',
@@ -37,7 +37,7 @@ const productsInitialState = [
   },
   {
     SKUNumber: 52345678,
-    name: 'Toll Free Numbers',
+    productName: 'Toll Free Numbers',
     type: 'Global',
     status: 'Available',
     activeDate: '10/17/2017',

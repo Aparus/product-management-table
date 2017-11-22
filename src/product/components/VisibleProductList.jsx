@@ -21,7 +21,7 @@ const ProductRow = ({
   onClick,
   selected,
   SKUNumber,
-  name,
+  productName,
   type,
   status,
   activeDate,
@@ -30,7 +30,7 @@ const ProductRow = ({
 }) => (
   <tr onClick={onClick} className={selected ? 'selected' : 'nonSelected'}>
     <td>{SKUNumber}</td>
-    <td>{name}</td>
+    <td>{productName}</td>
     <td>{type}</td>
     <td>{status}</td>
     <td>{activeDate}</td>
